@@ -27,7 +27,7 @@ public class PasswordMatchApp {
 			System.out.print("비밀번호 입력 >> ");
 			int password = in.nextInt();//InputMissMatchException
 			
-			if(password != 1234) {//비밀번호가 맞지 않을 경우
+			if(password != 1234) {//비밀번호가 맞지 않을 경우 
 				//인위적으로 예외 발생 - 예외 인스턴스를 생성하여 발생
 				// => JVM에 의해 자동으로 예외 처리되는 예외가 아니므로 에러 발생
 				throw new PasswordMismatchException("[결과]입력된 비밀번호가 다릅니다.");
