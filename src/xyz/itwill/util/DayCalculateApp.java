@@ -13,7 +13,6 @@ import java.util.Scanner;
 //simpledateformat(parse메소드), date(getTime메소드) 사용
 public class DayCalculateApp {
 	public static void main(String[] args) {
-		Date now = new Date();
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		
 		Scanner in = new Scanner(System.in);
@@ -22,16 +21,21 @@ public class DayCalculateApp {
 		//사용자의 생년월일을 입력받아 저장하기 위한 변수
 		String input = in.nextLine();
 		
+		if(input.charAt(4) != '-' || input.charAt(7) != '-') {
+			System.out.println("[에러]입력날짜의 형식이 맞지 않습니다.");
+			System.exit(0);
+		}
+		
 		try {
 			Date userBirthday = dateFormat.parse(input);
-			System.out.println(userBirthday);
-			System.out.println(userBirthday.getTime());
+			long birthTime =  (System.currentTimeMillis() / 1000) - (userBirthday.getTime() / 1000);
+			System.out.println("[결과]태어난지 " + (birthTime / 86400) + "일 지났습니다.");
+			
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		
-		
+		in.close();
 	}
 }
