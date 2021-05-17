@@ -1,6 +1,7 @@
 package xyz.itwill.lang;
 
 //String : 문자열을 저장하기 위한 클래스
+// => 문자열을 제어할 수 있는 기능 제공 - 저장된 문자열의 변환 메소드 미존재
 // => 내부적으로 String 인스턴스의 문자열은 byte 배열의 요소에 문자로 저장되어 처리
 public class StringApp {
 	public static void main(String[] args) {
