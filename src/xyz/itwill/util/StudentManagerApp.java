@@ -56,7 +56,9 @@ public class StudentManagerApp {
 		System.out.println("====================================================");
 		
 		//List 인스턴스에 저장된 학생정보를 정렬하여 출력
-		//Collections.sort(studentList);
+		//Collections.sort() 메소드에 전달되는 List 인스턴스는 요소의 필드값을 비교하여
+		//정렬하기 위한 기능이 제공되지 않으면 에러 발생
+		Collections.sort(studentList);
 		
 		for(Student student:studentList) {
 			System.out.println(student);//toString() 메소드 자동 호출
