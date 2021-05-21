@@ -37,6 +37,7 @@ public class ValidationApp {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		
+		
 		System.out.print("아이디 입력 >> ");
 		String id = in.nextLine();
 		
@@ -45,6 +46,7 @@ public class ValidationApp {
 			System.out.println("[에러]아이디를 반드시 입력해주세요");
 			System.exit(0);
 		}
+		
 		
 		//입력값 형식에 대한 검증 - 정규표현식을 이용한 유효성 검사
 		//아이디 입력 규칙 - 영문자로 시작되며 영문자, 숫자, 특수문자(_)의 조합으로 6~20 범위의 문자로 표현
