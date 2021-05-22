@@ -24,7 +24,7 @@ import java.awt.event.ActionListener;
 // => 이벤트 핸들러 메소드는 자동 호출되어 이벤트 처리
 
 //디자인 클래스와 이벤트 핸들러 클래스를 따로 선언한 경우
-// => 이벤트 핸들러 메소드에서 디자인 클래스의 컴퍼넌트 또는 컨테이너 제어가 불가능
+// => 이벤트 핸들러 메소드에서 디자인 클래스의 컴퍼넌트 또는 컨테이너 제어 불가능
 public class EventHandlerApp extends Frame {
 	private static final long serialVersionUID = 1L;
 
