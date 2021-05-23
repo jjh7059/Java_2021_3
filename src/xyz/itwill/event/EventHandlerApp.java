@@ -53,7 +53,7 @@ public class EventHandlerApp extends Frame {
 //이벤트 핸들러 클래스는 Listener 인터페이스를 상속받아 작성
 // => ActionEvent를 처리하기 위해서는 ActionListener 인터페이스를 상속받아 작성
 class ActionEventHandler implements ActionListener {
-	//ActionEvent가 발생된 경우 자동 호출되는 이벤트 핸들러 메소드
+	//ActionEvent가 발생된 경우 자동호출되는 이벤트 핸들러 메소드
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		System.exit(0);
