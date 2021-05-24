@@ -40,7 +40,7 @@ public class MenuApp extends Frame {
 		//Menu 컨테이너에 MenuItem 컴퍼넌트 배치
 		file.add(open);
 		file.add(save);
-		//Menu.addSeparator() : Menu 컨테이너에 구분선을 배치하는 메소드 
+		//Menu.addSeparator() : Menu 컨테이너에 구분선을 배치하는 메소드
 		file.addSeparator();
 		file.add(exit);
 		
