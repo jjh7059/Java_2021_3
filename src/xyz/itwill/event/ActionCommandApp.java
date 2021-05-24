@@ -44,10 +44,17 @@ public class ActionCommandApp extends Frame{
 		
 		white.setEnabled(false);
 		
+		/*
 		red.addActionListener(new RedButtonEventHandler());
 		green.addActionListener(new GreenButtonEventHandler());
 		blue.addActionListener(new BlueButtonEventHandler());
 		white.addActionListener(new WhiteButtonEventHandler());
+		*/
+		
+		red.addActionListener(new ColorButtonEventHandler());
+		green.addActionListener(new ColorButtonEventHandler());
+		blue.addActionListener(new ColorButtonEventHandler());
+		white.addActionListener(new ColorButtonEventHandler());
 		
 		addWindowListener(new WindowAdapter() {
 			@Override
@@ -65,6 +72,7 @@ public class ActionCommandApp extends Frame{
 		new ActionCommandApp("ActionCommand");
 	}
 	
+	/*
 	//모든 색상 버튼을 활성화 처리하는 메소드 - 초기화
 	public void initColorButton() {
 		red.setEnabled(true);
@@ -110,6 +118,41 @@ public class ActionCommandApp extends Frame{
 			white.setEnabled(false);
 			
 			canvas.setBackground(Color.WHITE);
+		}
+	}
+	*/
+	
+	public class ColorButtonEventHandler implements ActionListener{
+		//이벤트 핸들러 메소드의 매개변수에는 이벤트 소스에 의해 생성된 XXXEvent 인스턴스가
+		//자동으로 전달되어 저장
+		// => 매개변수에 저장된 이벤트 정보를 이용하여 이벤트 소스 구분
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			red.setEnabled(true);
+			green.setEnabled(true);
+			blue.setEnabled(true);
+			white.setEnabled(true);
+			
+			//이벤트 소스를 구분하여 이벤트 처리
+			//ActionEvent.getActionCommand() : ActionEvent를 발생시킨 이벤트 소스의
+			//ActionCommand를 반환하는 메소드
+			//ActionCommand : ActionEvent를 발생시킨 컴퍼넌트의 이름(문자열)
+			// => Button 컴퍼넌트는 버튼 라벨명이 ActionCommand로 설정
+			String actionCommand = e.getActionCommand();
+			
+			if(actionCommand.equals("빨간색")) {
+				red.setEnabled(false);
+				canvas.setBackground(Color.RED);
+			} else if(actionCommand.equals("초록색")) {
+				green.setEnabled(false);
+				canvas.setBackground(Color.GREEN);
+			} else if(actionCommand.equals("파란색")) {
+				blue.setEnabled(false);
+				canvas.setBackground(Color.BLUE);
+			} else if(actionCommand.equals("하얀색")) {
+				white.setEnabled(false);
+				canvas.setBackground(Color.WHITE);
+			}
 		}
 	}
 }
