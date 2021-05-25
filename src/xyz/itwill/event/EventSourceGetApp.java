@@ -118,17 +118,21 @@ public class EventSourceGetApp extends Frame {
 				blue.setEnabled(true);
 				black.setEnabled(true);
 				
+				//명시적 객체 형변환을 이용하여 Object 타입을 Button 타입으로 형변환
+				// => Button 클래스의 메소드 호출
+				((Button)eventSource).setEnabled(false);
+				
 				if(eventSource == red) {
-					red.setEnabled(false);
+					//red.setEnabled(false);
 					area.setForeground(Color.RED);
 				} else if(eventSource == green) {
-					green.setEnabled(false);
+					//green.setEnabled(false);
 					area.setForeground(Color.GREEN);
 				} else if(eventSource == blue) {
-					blue.setEnabled(false);
+					//blue.setEnabled(false);
 					area.setForeground(Color.BLUE);
 				} else if(eventSource == black) {
-					black.setEnabled(false);
+					//black.setEnabled(false);
 					area.setForeground(Color.BLACK);
 				}
 			} else if(eventSource instanceof TextField) {

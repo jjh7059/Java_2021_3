@@ -136,17 +136,15 @@ public class SwingApp extends JFrame {
 				blue.setEnabled(true);
 				black.setEnabled(true);
 				
+				((JButton)eventSource).setEnabled(false);
+				
 				if(eventSource == red) {
-					red.setEnabled(false);
 					area.setForeground(Color.RED);
 				} else if(eventSource == green) {
-					green.setEnabled(false);
 					area.setForeground(Color.GREEN);
 				} else if(eventSource == blue) {
-					blue.setEnabled(false);
 					area.setForeground(Color.BLUE);
 				} else if(eventSource == black) {
-					black.setEnabled(false);
 					area.setForeground(Color.BLACK);
 				}
 			} else if(eventSource instanceof JTextField) {
