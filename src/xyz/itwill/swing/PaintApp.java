@@ -11,7 +11,7 @@ public class PaintApp extends JFrame {
 	private static final long serialVersionUID = 1L;
 	
 	//마우스 버튼을 클릭한 위치의 좌표값을 저장하기 위한 필드
-	private int x, y;
+	private int x, y;//private Point point;
 	
 	public PaintApp(String title) {
 		super(title);

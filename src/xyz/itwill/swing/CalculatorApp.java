@@ -5,6 +5,8 @@ import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -20,6 +22,7 @@ public class CalculatorApp extends JFrame {
 	private JLabel label;
 	private JButton b0, b1, b2, b3, b4, b5, b6, b7, b8, b9;
 	private JButton bMulti, bDiv, bPlus, bMinus, bClear, bEquals;
+	
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -35,6 +38,7 @@ public class CalculatorApp extends JFrame {
 	}
 
 	public CalculatorApp() {
+		setTitle("Calculator");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 500);
 		contentPane = new JPanel();
@@ -115,6 +119,9 @@ public class CalculatorApp extends JFrame {
 		label.setHorizontalAlignment(SwingConstants.TRAILING);
 		label.setFont(new Font("Dialog", Font.BOLD, 30));
 		contentPane.add(label, BorderLayout.NORTH);
+		
+		
 	}
-
+	
+	
 }
