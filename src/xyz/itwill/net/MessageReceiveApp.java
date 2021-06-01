@@ -26,7 +26,6 @@ public class MessageReceiveApp {
 		//DatagramPacket 인스턴스에 저장된 byte 배열을 String 인스턴스로 변환하여 저장
 		String message = new String(data);
 		
-		
 		System.out.println("[결과]메시지 = " + message);
 		
 		socket.close();
